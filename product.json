@@ -1,0 +1,22 @@
+[
+  {
+    "image": "photos/headphones.jpg",
+    "price": 50,
+    "name": "Boat Headphone"
+  },
+  {
+    "image": "photos/laptop.jpg",
+    "price": 1000,
+    "name": "HP Laptop"
+  },
+  {
+    "image": "photos/teddy.jpg",
+    "price": 10,
+    "name": "Teddy Bear"
+  },
+  {
+    "image": "photos/dress.webp",
+    "price": 90,
+    "name": "Fancy Red Dress"
+  }
+]

@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    background-color: azure;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+}
+
+h2{
+    padding: 10px;
+    text-align: center;
+    font-style: arial;
+    background-color: beige;
+}
+
+.uiview{
+    flex: 3 3 0;
+}
+
+.navigation{
+    flex: 1 1 0;
+    background-color: azure;
+   
+}
+
+a{
+    display: grid;
+    text-decoration: none;
+    height: 50px;
+    /* text-align: center;
+    align-items: center; */
+    place-items: center;
+}
+
+a:hover{
+    background-color: lightblue;
+    text-decoration: none;
+}
+
+a:active{
+    color: black;
+}
+
+h3{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    display: block;
+    margin: 10px;
+}
+
+.active{
+    background-color: lightgreen;
+    text-decoration: none;
+}
+
+li{
+    height: 50px;
+    list-style-type: none;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.maincard {
+    margin: 10px;
+    box-shadow: 4px 4px 4px 4px lightblue;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+canvas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+}
+
+img{
+    width: 20vw;
+    height: 20vw;
+    font-family:Arial;
+    text-align: center;
+    
+}
+
+.commerce{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+

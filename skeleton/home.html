@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="uiview">
+        <div class="maincard">
+            <h3 style="text-align: center;">Sales Overview</h3>
+            <canvas id="mainchart"></canvas>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="maincard">
+            <h3 style="text-align: center;">Yearly Overview</h1>
+                <canvas id="yearlybreakup"></canvas>
+        </div>
+    </div>
+
+</div>
+
+<div class="commerce">
+    <div class="maincard" ng-repeat="product in $ctrl.products" ng-click="$ctrl.showdetails(product)">
+        <img ng-src="{{product.image}}">
+        <h2>{{product.name}} <br><br> ${{product.price}} </h2>
+    </div>
+</div>
+
+<div class="uiview">
+    <ui-view> </ui-view>
+</div>
+
+
+
+
