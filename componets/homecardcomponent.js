@@ -4,7 +4,7 @@ myapp.component('cardview1', {
     controller: function ($timeout, $state, $http) {
         this.showdetails = function (productId) {
             console.log(productId);
-            $state.go('home.detail', {productId: productId})
+            $state.go('home.detail', {productId: JSON.stringify(productId)})
         }
 
 
