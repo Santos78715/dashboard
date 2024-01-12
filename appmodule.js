@@ -40,6 +40,7 @@ myapp.config(function ($stateProvider, $urlRouterProvider) {
         component: 'typographycomponent'
     };
 
+    $urlRouterProvider.otherwise('/home')
     $stateProvider.state(homestate);
     $stateProvider.state(detailState);
     $stateProvider.state(cardstate);
