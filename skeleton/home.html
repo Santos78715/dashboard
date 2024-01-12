@@ -1,31 +1,114 @@
+<!-- <div class="mainDashboard">
+    <form id="dataForm">
+        <label for="xValue">Enter X Value:</label>
+        <input type="text" id="xValue" required>
+        
+        <label for="yValue">Enter Y Value:</label>
+        <input type="number" id="yValue" required>
+        
+        <button type="button" ng-click="$ctrl.newdata()">Add Data</button>
+      </form>
 
-<div class="container">
+      <div class="cardcontainer">
+        <div class="card">
+            <canvas id = 'mainchart'></canvas>
+            <canvas id = 'sidechart'></canvas>
+        </div>
+      </div>
+      <div class="cardcontainer">
+        <div class="card" ng-repeat="product in $ctrl.products" ng-click="$ctrl.showdetails(product)">
+            <img ng-src="{{product.image}}">
+            <h2>{{product.name}} <br><br> ${{product.price}} </h2>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="mainDashboard">
     <div class="uiview">
-        <div class="maincard">
-            <h3 style="text-align: center;">Sales Overview</h3>
-            <canvas id="mainchart"></canvas>
+        <div class="card" style="width: 100%;">
+            <form id="dataForm">
+                <label for="xValue">Enter X Value:</label>
+                <input type="text" id="xValue" required>
+                
+                <label for="yValue">Enter Y Value:</label>
+                <input type="number" id="yValue" required>
+                
+                <button type="button" ng-click="$ctrl.newdata()">Add Data</button>
+              </form>
         </div>
     </div>
-    <div class="navigation">
-        <div class="maincard">
-            <h3 style="text-align: center;">Yearly Overview</h1>
-                <canvas id="yearlybreakup"></canvas>
+
+    <div class="card" style="width: 100%;">
+        <form id="dataForm">
+            <label for="xValue">Enter X Value:</label>
+            <input type="text" id="xValue" required>
+            
+            <label for="yValue">Enter Y Value:</label>
+            <input type="number" id="yValue" required>
+            
+            <button type="button" ng-click="$ctrl.newdata()">Add Data</button>
+          </form>
+    </div>
+</div> -->
+
+<!-- Button trigger modal -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 m-2" style="text-align: end;">
+            <!-- Second button -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                Enter New Details
+            </button>
         </div>
     </div>
 
-</div>
-
-<div class="commerce">
-    <div class="maincard" ng-repeat="product in $ctrl.products" ng-click="$ctrl.showdetails(product)">
-        <img ng-src="{{product.image}}">
-        <h2>{{product.name}} <br><br> ${{product.price}} </h2>
+    <div class="container-fluid" id='main'>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="height: 500px; justify-content: start;">
+                    <canvas id="mainchart"></canvas>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="height: 500px; align-items: center;">
+                    <canvas id="sidechart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 mt-3 cardcontainer" ng-repeat="product in $ctrl.products"
+                ng-click="$ctrl.showdetails(product)">
+                <div class="card">
+                    <img ng-src="{{product.image}}">
+                    <h2>{{product.name}} <br><br> ${{product.price}} </h2>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="uiview">
-    <ui-view> </ui-view>
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content m-3">
+            <form id="dataForm">
+                <div class="m-5">
+                    <label for="xValue" class="form-label" style="font-size: 18px;">Country:</label>
+                    <input type="text" id="xValue" class="form-control" required>
+                </div>
+
+                <div class="m-5">
+                    <label for="yValue" class="form-label">Production:</label>
+                    <input type="number" id="yValue" class="form-control" required>
+                </div>
+
+                <div class="text-center mb-">
+                    <button class="btn btn-primary" style="padding: 10px;" type="button" ng-click="$ctrl.newdata()" data-bs-dismiss="modal">Add Data</button>
+                </div>
+            </form>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-

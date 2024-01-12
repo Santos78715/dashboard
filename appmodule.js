@@ -8,15 +8,19 @@ myapp.config(function ($stateProvider, $urlRouterProvider) {
     }
 
     var detailState = {
-        name: 'home.detail',
-        url: '/detail/:productId',  // Use a parameter to pass the selected product id
+        name: 'detail',
+        url: '/detail/:selectedproduct/:remainingproduct',
         component: 'detailcomponent',
         resolve: {
-            productId: function($stateParams) {
-                return $stateParams.productId;
+            selectedproduct: function ($stateParams) {
+                return $stateParams.selectedproduct;
+            },
+            remainingproduct: function ($stateParams) {
+                return $stateParams.remainingproduct;
             }
         }
     }
+    
 
     var cardstate = {
         name: 'card',
